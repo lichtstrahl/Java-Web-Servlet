@@ -8,10 +8,15 @@
 <body>
 
 <table border="1">
-    <c:forEach items="${posts}" var="post">
+    <c:forEach items="${requestScope.posts}" var="post">
         <tr>
-            <td>"${post.id}}</td>
-            <td>"${post.content}"</td>
+            <td>${post.id}</td>
+            <td>${post.content}</td>
+            <td>
+                <a href="delete?id=${post.id}">
+                    <img src="delete.png"/>
+                </a>
+            </td>
         </tr>
     </c:forEach>
 </table>
