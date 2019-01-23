@@ -24,4 +24,8 @@ public class DAO {
             }
         }
     }
+
+    public static void addPost(String content) {
+        posts.add(new Post(posts.size() + 1, content));
+    }
 }
